@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"> 
+    <title> Encriptador </title>
+
+    <link rel="stylesheet" href="C:\Users\GABY SOBRON\Desktop\Raul\Proyectos\Encriptador\Estilos.css">
+    <!--Este archivo contiene los estilos de la pagina-->   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">     
+
+    <link rel="icon" type="image/png" href="C:\Users\GABY SOBRON\Desktop\Raul\Proyectos\Encriptador\Alura.png">
+    <!--Este archivo contiene los estilos de la pagina-->   
+        
+</head>
+
+<body>
+    <header>
+        <img src="C:\Users\GABY SOBRON\Desktop\Raul\Proyectos\Encriptador\Vector.png" alt="logo de Alura" class="logo">
+      
+    </header>
+
+    <main>
+        <div class="contenedor-entrada">           
+          <input type="text" id="texto" name="texto" placeholder="Ingresa el texto" maxlength="100" required>
+        </div>
+      
+        <div class="contenedor-botones">
+          <input type="button" value="Encriptar" onclick="encriptarTexto()">
+          <input type="button" value="Desencriptar" onclick="desencriptarTexto()">
+          <h6>Solo minusculas por favor</h6>
+        </div>
+      
+        <div class="contenedor-resultado imagen-fondo">
+          <p id="resultado"></p>
+          <button id="boton-copiar" onclick="copiarTexto()">Copiar</button>
+<script>
+          function copiarTexto() {
+            // Seleccionar el texto a copiar y crear un elemento de texto temporal
+            let texto = document.getElementById("resultado").textContent;
+            let textoTemp = document.createElement("textarea");
+            textoTemp.value = texto;
+            document.body.appendChild(textoTemp);
+            
+            // Seleccionar el texto temporal y copiarlo al portapapeles
+            textoTemp.select();
+            document.execCommand("copy");
+            
+            // Eliminar el elemento temporal
+            document.body.removeChild(textoTemp);
+          }
+</script>
+        </div>
+
+    </main>
+    
+    <footer>
+  <div class="footer-container">
+    <div class="left">
+      <h4>Desarrollado por:</h4>
+      <p>Jose Raul Huesca Sobron</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="right">      
+      <h4>Contacto:</h4>
+      <p>Empresa:Peyote Studios</p>
+      <p>Dirección: Orizaba, Veracruz, Mexico</p>
+      <p>Teléfono: 272 130 08 18</p>      
+    </div>
+  </div>
+</footer>
+
+    <script>
+        function encriptarTexto() {
+        let texto = document.getElementById("texto").value;
+  
+// Validar que el texto solo contenga letras minúsculas
+        if (/[^a-z\s\ñ]/.test(texto)) {
+        alert("El texto debe contener solo letras minúsculas");
+        return;
+        }
+  
+  // Si el texto es válido, continuar con la encriptación
+  texto = texto.replace(/e/g, "enter");
+  texto = texto.replace(/i/g, "imes");
+  texto = texto.replace(/a/g, "ai");
+  texto = texto.replace(/o/g, "ober");
+  texto = texto.replace(/u/g, "ufat");
+  document.getElementById("resultado").textContent = texto;
+}
+
+function desencriptarTexto() {
+  let texto = document.getElementById("texto").value;
+  
+  // Validar que el texto solo contenga letras minúsculas
+  if (/[^a-z\s\ñ]/.test(texto)) {
+    alert("El texto debe contener solo letras minúsculas");
+    return;
+  }
+  
+  // Si el texto es válido, continuar con la desencriptación
+  texto = texto.replace(/enter/g, "e");
+  texto = texto.replace(/imes/g, "i");
+  texto = texto.replace(/ai/g, "a");
+  texto = texto.replace(/ober/g, "o");
+  texto = texto.replace(/ufat/g, "u");
+  document.getElementById("resultado").textContent = texto;
+}
+    </script>
+    
+</body>
+</html>
+

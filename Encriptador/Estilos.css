@@ -1,0 +1,168 @@
+body {
+    background-color: #F3F5FC;
+    
+}
+
+header {    
+    color: #042a71;    
+    padding: 4px;
+    font-size: 30px;
+    margin-top: -30px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contenedor-entrada {
+    background-color:#F3F5FC;
+    margin-left: 0;
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    margin-left: -400px;
+    height: 40px;
+  }
+
+.contenedor-resultado {
+  
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;  
+    height: 400px;
+    width: 400px;
+}
+
+p#resultado {
+    margin-top: 25px;
+    color: #F3F5FC;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+input[type="button"] {
+    background-color: #052051;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+    padding: 10px;
+    border-radius: 100px;
+}
+
+input[type="text"] {
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    margin-left: 80px;
+}
+
+
+
+p {
+    margin-top: 1rem;
+}
+
+
+  
+  .contenedor-botones input {
+    margin: 0 10px;
+  }
+
+  .imagen-fondo {
+    background-image: url("C:/Users/GABY SOBRON/Desktop/Raul/Proyectos/Encriptador/personaje19.jpg");       
+    background-size: contain;      
+  }
+
+ 
+  #boton-copiar {
+    position: absolute;
+    top: 412px;
+    right: 195px;
+    background-color: #052051;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+
+
+
+
+  footer {
+    background-color: #222;
+    color: #fff;    
+    width: 100%;
+    position: absolute;   
+    left: 0;
+  }
+  
+  .footer-container {
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .left {
+    width: 50%;
+  }
+  
+  .right {
+    width: 50%;
+  }
+  
+  h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .social-media a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  
+  .social-media a:hover {
+    color: #ccc;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .right img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+ 
+
+  .logo{
+    padding: 30px;
+    
+
+  }
